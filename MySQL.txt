@@ -1,0 +1,134 @@
+MySQL 数据类型
+MySQL中定义数据字段的类型对你数据库的优化是非常重要的。
+MySQL支持多种类型，大致可以分为三类：数值、日期/时间和字符串(字符)类型。
+
+1、查询数据
+SELECT语句 - 显示如何使用简单的SELECT语句来查询单个表中的数据。
+SELECT DISTINCT语句 - 了解如何在SELECT语句中使用DISTINCT运算符来消除结果集中的重复行。
+
+2、过滤数据
+WHERE - 学习如何使用WHERE子句根据指定的条件过滤行记录。
+AND运算符 - 介绍如何使用AND运算符以组合布尔表达式以形成用于过滤数据的复杂条件。
+OR运算符 - 介绍OR运算符，并展示如何将OR运算符与AND运算符组合以过滤数据。
+IN运算符 - 学习如何在WHERE子句中使用IN运算符来确定值是否匹配列表或子查询中的指定值。
+BETWEEN运算符 - 显示如何使用BETWEEN运算符来根据指定范围查询数据。
+LIKE - 提供基于特定模式匹配查询数据的技术示例，以执行一些模糊查询。
+LIMIT子句 - 使用LIMIT来限制SELECT语句返回的行数
+IS NULL - 使用IS NULL运算符测试值是否为NULL。
+
+3、排序数据
+ORDER BY - 显示如何使用ORDER BY子句排序结果集。还将介绍使用FIELD函数的自定义排序顺序。
+使用ORDER BY子句进行自然排序 - 通过使用ORDER BY子句，演示MySQL中的各种自然排序技术。
+
+4、连接表
+MySQL别名 - 引入别名，包括表别名和列别名，以提高复杂查询的可读性，并避免在查询具有相同列名称的多个表中的数据时发生歧义错误。
+INNER JOIN - 应用内部联接技术来查询来自多个相关表的数据。
+LEFT JOIN - 学习如何使用左连接来生成包含来自连接左侧表中的行的结果集，并使用NULL值来补充不匹配行。
+CROSS JOIN - 学习如何使来自多个表的行的笛卡尔乘积。
+自连接 – 使用表别名将表连接到自身，并使用其他类型的连接(如INNER JOIN或LEFT JOIN)连接同一表中的行记录。
+
+5、分组数据
+GROUP BY子句 - 学习如何根据列或表达式将行记录分组到子组。
+HAVING子句 - 按特定条件过滤组。
+
+6、MySQL子查询，派生表和通用表达式
+MySQL子查询 - 学习如何在另一个查询(外部查询)中嵌套另一个查询语句(内部查询)，并使用内部查询的结果值作为外部查询条件。
+MySQL派生表 - 介绍派生表概念，并演示如何使用它来简化复杂查询。
+MySQL通用表表达式 - 解释通用表表达式概念，并向您展示如何使用CTE查询表中的数据。
+递归CTE - 演示如何使用递归通用表表达式(CTE)遍历分层数据。
+
+7、使用SET操作符
+UNION和UNION ALL - 使用UNION和UNION ALL操作符将两个或多个多个SELECT语句的结果集合合并到一个结果集中。
+INTERSECT模拟 - 显示了几种模拟MySQL中INTERSECT运算符的方法。
+
+8、修改MySQL中的数据
+INSERT语句 - 学习如何使用各种形式的INSERT语句将数据插入到数据库表中。
+INSERT IGNORE - 解释将数据行插入到表中并忽略导致错误或异常的行的INSERT IGNORE语句。
+UPDATE语句 - 了解如何使用UPDATE语句及其选项来更新数据库表中的数据。
+UPDATE JOIN语句 - 显示如何使用带有INNER JOIN和LEFT JOIN的UPDATE JOIN语句执行交叉表更新。
+DELETE - 学习如何使用DELETE语句从一个或多个表中删除数据。
+ON DELETE CASCADE - 学习如何从父表中删除数据时，使用外部键从DELETE CASCADE引用动作删除子表中的数据。
+DELETE JOIN - 学习如何从多个表中删除数据。
+REPLACE语句 - 学习如何插入或更新数据，这取决于数据是否存在于表中。
+PREPARE语句 - 显示如何使用PREPARE语句执行查询。
+
+9、 MySQL事务
+MySQL事务 - 了解MySQL事务，以及如何使用COMMIT和ROLLBACK来管理MySQL中的事务。
+MySQL表锁定 - 了解如何使用MySQL锁来协调会话之间的表访问。
+
+10、管理MySQL数据库和表
+MySQL数据库管理 - 学习各种语句来管理MySQL数据库，包括创建新数据库，删除现有数据库，选择数据库以及列出所有数据库。
+MySQL表类型 - 了解每个表类型的功能至关重要，以便您可以有效地使用它们来最大限度地提高数据库的性能。
+CREATE TABLE - 学习如何使用CREATE TABLE语句在数据库中创建新表。
+MySQL序列 - 学习如何使用序列为表的主键列自动生成唯一的数字。
+ALTER TABLE - 学习如何使用ALTER TABLE语句来更改现有表的结构。
+重命名表 - 演示如何使用RENAME TABLE语句重命名表。
+从表中删除列 - 学习如何使用ALTER TABLE DROP COLUMN语句从表中删除一个或多个列。
+向表中添加新列 - 学习如何使用ALTER TABLE ADD COLUMN语句向现有表添加一个或多个列。
+删除表 - 学习如何使用DROP TABLE语句删除现有表。
+MySQL临时表 - 讨论MySQL临时表，并学习如何管理临时表。
+TRUNCATE TABLE - 学习如何使用TRUNCATE TABLE语句删除表中的所有数据。
+
+11、MySQL索引
+管理MySQL数据库索引 - 学习如何使用MySQL索引，以及如何利用索引来加快数据检索。
+MySQL UNIQUE索引 - 显示如何使用UNIQUE索引来强制一个或多个列的值的唯一性。
+
+12、 MySQL数据类型
+MySQL数据类型 - 学习MySQL中的各种数据类型，以便您可以在设计数据库表时有效应用它们。
+INT - 学习如何使用整数数据类型。并演示如何使用ZEROFILL和整数列的宽度属性。
+DECIMAL - 学习如何使用DECIMAL数据类型存储十进制格式的精确值。
+BIT - 介绍BIT数据类型以及如何在MySQL中存储位值。
+BOOLEAN - 学习MySQL如何通过内部使用TINYINT(1)来处理布尔值。
+CHAR - 学习如何使用存储固定长度字符串的CHAR数据类型。
+VARCHAR - 提供VARCHAR数据类型的基本指南。
+TEXT - 演示如何使用TEXT数据类型存储文本数据。
+DATE - 介绍DATE数据类型，并显示一些日期功能来有效处理日期数据。
+TIME - 学习TIME数据类型的功能，并向您演示如何使用一些有用的时间功能来处理时间数据。
+DATETIME - 介绍DATETIME数据类型和一些有用的函数来操作日期时间值。
+TIMESTAMP - 介绍TIMESTAMP类型及其功能，调用自动初始化和自动更新，允许您为表定义自动初始化和自动更新的列。
+JSON格式类型 - 显示如何使用JSON数据类型来存储JSON文档。
+ENUM - 了解如何正确使用ENUM数据类型来存储枚举值。
+
+13、MySQL约束
+NOT NULL约束 - 引入NOT NULL约束，并显示如何为列定义NOT NULL约束或将NOT NULL约束添加到现有列。
+主键约束 - 指导如何使用主键约束来创建表的主键。
+外键约束 - 学习外键概念，并逐步显示如何创建和删除外键。
+UNIQUE约束 - 显示如何使用UNIQUE约束来强制表中列或一组列的值的唯一性。
+CHECK约束 - 通过各种方式来模拟MySQL中的CHECK约束。
+
+14、 MySQL全球化
+MySQL字符集 - 本教程讨论MySQL字符集，并演示如何对字符集执行各种操作。
+MySQL排序规则 - 本教程讨论了MySQL排序规则，并向您展示了如何为MySQL服务器，数据库，表和列设置字符集和排序规则。
+
+15、MySQL导入和导出
+将CSV文件导入MySQL表 - 演示如何使用LOAD DATA INFILE语句将CSV文件导入MySQL表。
+MySQL导出表到CSV - 学习如何将MySQL表导出为CSV文件格式的各种技术。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
