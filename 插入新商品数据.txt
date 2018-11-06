@@ -1,0 +1,254 @@
+INSERT INTO shop_goods (
+	goods_id,
+	-- 商品ID
+	goods_erp_code,
+	-- erp编码
+	sinopharm_goods_code,
+	-- 国药统一码
+	supplier_code,
+	-- 供应商编码
+	supplier_name,
+	-- 供应商名称
+	goods_name,
+	-- 商品描述（中文名称）
+	goods_ename,
+	-- 商品描述（英文名称）
+	spec_name,
+	-- 规格型号
+	goods_unit,
+	-- 包装单位
+	brand_id,
+	-- 品牌ID
+	goods_serial,
+	-- 商品货号
+	cas_no,
+	-- cas号
+	cas_index_no,
+	-- cas索引号
+	control_info,
+	-- 管制品信息
+	dangerous_nature,
+	-- 危险品性质
+	un_no,
+	-- Un号
+	shipping_condition,
+	-- 运输条件
+	storage_condition,
+	-- 存储条件
+	goods_ext2,
+	-- 开票计量单位
+	goods_store_price,
+	-- 商品牌价（含税）
+	goods_market_discount,
+	-- 进价折扣
+	goods_market_price,
+	-- 进货价格（含税）
+	pur_rate,
+	-- 税率
+	store_type,
+	-- 库存类型
+	arrival_cycle,
+	-- 备货期（交货期）
+	tax_code,
+	-- 税务编码
+	tax_name,
+	-- 税务名称
+	brand_code,
+	-- 品牌代码
+	erp_class_code,
+	-- U8存货分类编码
+	erp_invoice_spec,
+	-- U8开票规格
+	erp_new_class_code,
+	-- U8新分类编码
+	price_end_date,
+	-- 目录有效期
+	s_currency,
+	-- 原币币种
+	s_currency_price,
+	-- 原币币价
+	goods_comm_name,
+	-- 中文别名
+	goods_enickname,
+	-- 英文别名
+	indication,
+	-- 性状
+	molecular_formula,
+	-- 分子式
+	molecular_weight,
+	-- 分子量
+	usage_dosage,
+	-- 用途 
+	contraindication,
+	-- 安全措施
+	matters_attention,
+	-- 急救
+	untoward_effect,
+	-- 灭火方法
+	quality_standard,
+	-- 质量标准
+	goods_image,
+	-- 商品图片
+	producer_name,
+	-- 生产商名称
+	mdl_no,
+	-- MDL号
+	month_validity,
+	-- 商品效期
+	goods_first_code,
+	-- 存货代码
+	erp_bar_code,
+	-- U8对应条形编码
+	explosive_name,
+	-- 易爆名称
+	explosive_num,
+	-- 易爆数量（千克）
+	goods_property,
+	-- 货品属性
+	goods_ext3,
+	-- 预算分类
+	goods_ext4,
+	-- 管制品标识
+	goods_body,
+	-- 详细描述
+	gc_first_id,
+	-- 网站一级分类码
+	gc_second_id,
+	-- 网站二级分类码
+	gc_id -- 网站三级分类码
+) SELECT
+	goods_id,
+	-- 商品ID
+	goods_erp_code,
+	-- erp编码
+	sinopharm_goods_code,
+	-- 国药统一码
+	supplier_code,
+	-- 供应商编码
+	supplier_name,
+	-- 供应商名称
+	goods_name,
+	-- 商品描述（中文名称）
+	goods_ename,
+	-- 商品描述（英文名称）
+	spec_name,
+	-- 规格型号
+	goods_unit,
+	-- 包装单位
+	brand_id,
+	-- 品牌ID
+	goods_serial,
+	-- 商品货号
+	cas_no,
+	-- cas号
+	cas_index_no,
+	-- cas索引号
+	control_info,
+	-- 管制品信息
+	dangerous_nature,
+	-- 危险品性质
+	un_no,
+	-- Un号
+	shipping_condition,
+	-- 运输条件
+	storage_condition,
+	-- 存储条件
+	goods_ext2,
+	-- 开票计量单位
+	goods_store_price,
+	-- 商品牌价（含税）
+	goods_market_discount,
+	-- 进价折扣
+	goods_market_price,
+	-- 进货价格（含税）
+	pur_rate,
+	-- 税率
+	store_type,
+	-- 库存类型
+	arrival_cycle,
+	-- 备货期（交货期）
+	tax_code,
+	-- 税务编码
+	tax_name,
+	-- 税务名称
+	brand_code,
+	-- 品牌代码
+	erp_class_code,
+	-- U8存货分类编码
+	erp_invoice_spec,
+	-- U8开票规格
+	erp_new_class_code,
+	-- U8新分类编码
+	price_end_date,
+	-- 目录有效期
+	s_currency,
+	-- 原币币种
+	s_currency_price,
+	-- 原币币价
+	goods_comm_name,
+	-- 中文别名
+	goods_enickname,
+	-- 英文别名
+	indication,
+	-- 性状
+	molecular_formula,
+	-- 分子式
+	molecular_weight,
+	-- 分子量
+	usage_dosage,
+	-- 用途 
+	contraindication,
+	-- 安全措施
+	matters_attention,
+	-- 急救
+	untoward_effect,
+	-- 灭火方法
+	quality_standard,
+	-- 质量标准
+	goods_image,
+	-- 商品图片
+	producer_name,
+	-- 生产商名称
+	mdl_no,
+	-- MDL号
+	month_validity,
+	-- 商品效期
+	goods_first_code,
+	-- 存货代码
+	erp_bar_code,
+	-- U8对应条形编码
+	explosive_name,
+	-- 易爆名称
+	explosive_num,
+	-- 易爆数量（千克）
+	goods_property,
+	-- 货品属性
+	goods_ext3,
+	-- 预算分类
+	goods_ext4,
+	-- 管制品标识
+	goods_body,
+	-- 详细描述
+	gc_first_id,
+	-- 网站一级分类码
+	gc_second_id,
+	-- 网站二级分类码
+	gc_id -- 网站三级分类码
+FROM
+	shop_goods_middle
+WHERE
+	sinopharm_goods_code IN (
+		SELECT
+			a.sinopharm_goods_code
+		FROM
+			shop_goods AS a
+		WHERE
+			NOT EXISTS (
+				SELECT
+					sinopharm_goods_code
+				FROM
+					shop_goods_middle AS b
+				WHERE
+					b.sinopharm_goods_code = a.sinopharm_goods_code
+			)
+	)

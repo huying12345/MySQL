@@ -1,0 +1,139 @@
+UPDATE shop_goods AS a,
+ shop_goods_middle AS b
+SET a.goods_id = b.goods_id,
+ -- 商品ID
+a.goods_erp_code = b.sinopharm_goods_code,
+ -- erp编码
+a.sinopharm_goods_code = b.sinopharm_goods_code,
+ -- 国药统一码
+a.supplier_code = b.supplier_code,
+ -- 供应商编码
+a.supplier_name = b.supplier_name,
+ -- 供应商名称
+a.goods_name = b.goods_name,
+ -- 商品描述（中文名称）
+a.goods_ename = b.goods_ename,
+ -- 商品描述（英文名称）
+a.spec_name = b.spec_name,
+ -- 规格型号
+a.goods_unit = b.goods_unit,
+ -- 包装单位
+a.brand_id = b.brand_id,
+ -- 品牌ID
+a.goods_serial = b.goods_serial,
+ -- 商品货号
+a.cas_no = b.cas_no,
+ -- cas号
+a.cas_index_no = b.cas_index_no,
+ -- cas索引号
+a.control_info = b., -- 管制品信息
+a.dangerous_nature = b.control_info,
+ -- 危险品性质
+a.un_no = b.un_no,
+ -- Un号
+a.shipping_condition = b.shipping_condition,
+ -- 运输条件
+a.storage_condition = b.storage_condition,
+ -- 存储条件
+a.goods_ext2 = b.goods_ext2,
+ -- 开票计量单位
+a.goods_store_price = b.goods_store_price,
+ -- 商品牌价（含税）
+a.goods_market_discount = b.goods_market_discount,
+ -- 进价折扣
+a.goods_market_price = b.goods_market_price,
+ -- 进货价格（含税）
+a.pur_rate = b.pur_rate,
+ -- 税率
+a.store_type = b.store_type,
+ -- 库存类型
+a.arrival_cycle = b.arrival_cycle,
+ -- 备货期（交货期）
+a.tax_code = b.tax_code,
+ -- 税务编码
+a.tax_name = b.tax_name,
+ -- 税务名称
+a.brand_code = b.brand_code,
+ -- 品牌代码
+a.erp_class_code = b.erp_class_code,
+ -- U8存货分类编码
+a.erp_invoice_spec = b.erp_invoice_spec,
+ -- U8开票规格
+a.erp_new_class_code = b.erp_new_class_code,
+ -- U8新分类编码
+a.price_end_date = b.price_end_date,
+ -- 目录有效期
+a.s_currency = b.s_currency,
+ -- 原币币种
+a.s_currency_price = b.s_currency_price,
+ -- 原币币价
+a.goods_comm_name = b.goods_comm_name,
+ -- 中文别名
+a.goods_enickname = b.goods_enickname,
+ -- 英文别名
+a.indication = b.indication,
+ -- 性状
+a.molecular_formula = b.molecular_formula,
+ -- 分子式
+a.molecular_weight = b.molecular_weight,
+ -- 分子量
+a.usage_dosage = b.usage_dosage,
+ -- 用途 
+a.contraindication = b.contraindication,
+ -- 安全措施
+a.matters_attention = b.matters_attention,
+ -- 急救
+a.untoward_effect = b.untoward_effect,
+ -- 灭火方法
+a.quality_standard = b.quality_standard,
+ -- 质量标准
+a.goods_image = b.goods_image,
+ -- 商品图片
+a.producer_name = b.producer_name,
+ -- 生产商名称
+a.mdl_no = b.mdl_no,
+ -- MDL号
+a.month_validity = b.month_validity,
+ -- 商品效期
+a.goods_first_code = b.goods_first_code,
+ -- 存货代码
+a.erp_bar_code = b.erp_bar_code,
+ -- U8对应条形编码
+a.explosive_name = b.explosive_name,
+ -- 易爆名称
+a.explosive_num = b.explosive_num,
+ -- 易爆数量（千克）
+a.goods_property = b.goods_property,
+ -- 货品属性
+a.goods_ext3 = b.goods_ext3,
+ -- 预算分类
+a.goods_ext4 = b.goods_ext4,
+ -- 管制品标识
+a.goods_body = b.goods_body,
+ -- 详细描述
+a.gc_first_id = b.gc_first_id,
+ -- 网站一级分类码
+a.gc_second_id = b.gc_second_id,
+ -- 网站二级分类码
+a.gc_id = b.gc_id -- 网站三级分类码
+WHERE
+	a.sinopharm_goods_code IN (
+		SELECT
+			a.sinopharm_goods_code
+		FROM
+			shop_goods AS a
+		WHERE
+			NOT EXISTS (
+				SELECT
+					sinopharm_goods_code
+				FROM
+					shop_goods_middle AS b
+				WHERE
+					b.sinopharm_goods_code = a.sinopharm_goods_code
+			)
+	)
+
+
+
+
+

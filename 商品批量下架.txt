@@ -1,0 +1,17 @@
+-- 批量下架 更新goods_show 和 goods_state
+UPDATE shop_goods
+SET goods_show = 0, -- 0 下架，1 上架
+ goods_state = 40 -- 40 违规下架
+WHERE
+	goods_unit = '' -- 包装单位
+AND brand_id = '' -- 品牌
+AND goods_serial = ''; -- 货号
+
+-- -------------------------------------
+UPDATE shop_goods_platform
+SET goods_show = 0, -- 0 下架，1 上架
+ goods_state = 40 -- 40 违规下架
+WHERE
+	goods_unit = '' -- 包装单位
+AND brand_id = '' -- 品牌
+AND goods_serial = ''; -- 货号
